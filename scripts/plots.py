@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-def plot_gaussians_with_axes(matrix, data):
+def plot_gaussians_with_axes(matrix, data, title = 'Gaussian data with axes'):
     if matrix.shape[0] == 2: 
         fig, ax = plt.subplots()
         ax.scatter(data[:, 0], data[:, 1], color='y', alpha=0.5)
@@ -12,7 +12,7 @@ def plot_gaussians_with_axes(matrix, data):
         ax.set_aspect('equal')
         plt.xlabel('X')
         plt.ylabel('Y')
-        plt.title('Gaussians with Axes')
+        plt.title(title)
         plt.grid()
         plt.show()
     elif matrix.shape[0] == 3: 
@@ -26,7 +26,7 @@ def plot_gaussians_with_axes(matrix, data):
         ax.set_xlabel('X')
         ax.set_ylabel('Y')
         ax.set_zlabel('Z')
-        ax.set_title('Gaussians with Axes')
+        ax.set_title(title)
         plt.show()
     else:
         print("Invalid matrix dimensions. Supported dimensions are 2x2 and 3x3.")
