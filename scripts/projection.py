@@ -30,6 +30,5 @@ if __name__ == "__main__":
     gen_dat = DataGenerator(1000, 3)
     matrix = gen_dat.matrix
     points = gen_dat.cross_data()
-
     # Plot basis axes and lines projecting points to closest basis axis
     plot_basis_and_lines(matrix, points)
